@@ -21,7 +21,11 @@
 // -----------------------------------------------------------------------------
 
 let{sum,sub} = require("./first")
+let multi = require("./module/multi")
+let newFile = require("../New")
 console.log("Main File")
 
 sum()
 sub() 
+multi()
+newFile()
