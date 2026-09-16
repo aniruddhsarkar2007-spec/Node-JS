@@ -85,11 +85,39 @@ let fs = require('fs')
 //     }
 // })
 
-fs.unlink("new folder/hii.txt",(e)=>{
-        if(e){
+// fs.unlink("new folder/hii.txt",(e)=>{
+    //     if(e){
+    //     console.log("Error",e)
+    // }
+    // else{
+    //     console.log("deleted")
+    // }
+// })
+
+
+fs.writeFile("Practice.txt","Hii i am practicing",(e)=>{
+     if(e){
         console.log("Error",e)
     }
     else{
-        console.log("deleted")
+        console.log("File is created")
+    }
+})
+
+fs.readFile("Practice.txt","utf-8",(e,data)=>{
+     if(e){
+        console.log("Error",e)
+    }
+    else{
+        console.log(data)
+    }
+})
+
+fs.appendFile("Practice.txt"," the new text is added",(e,data)=>{
+     if(e){
+        console.log("Error",e)
+    }
+    else{
+        console.log("Success")
     }
 })
